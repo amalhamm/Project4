@@ -31,9 +31,9 @@ public class Main {
             choice = Integer.parseInt(keyboard.nextLine());
 
             if (choice == 1) {
-                CollegeDB.addStudent(getStudentInfo());
+                org.example.CollegeDB.addStudent(getStudentInfo());
             } else if (choice == 2) {
-                ArrayList<Student> students = CollegeDB.getStudents();
+                ArrayList<Student> students = org.example.CollegeDB.getStudents();
 
                 for (Student student : students) {
                     System.out.println(student);
@@ -45,7 +45,7 @@ public class Main {
                 System.out.println("Enter ID of student to update");
                 int id =  Integer.parseInt(keyboard.nextLine());
 
-                ArrayList<Student> students = CollegeDB.getStudent(id);
+                ArrayList<Student> students = org.example.CollegeDB.getStudent(id);
 
                 boolean foundStudent = false;
                 // TODO - fix later to find just 1
@@ -54,7 +54,7 @@ public class Main {
                         System.out.println(student);
                         Student studentInfo = getStudentInfo();
                         studentInfo.setID(id);
-                        CollegeDB.updateStudent(studentInfo);
+                        org.example.CollegeDB.updateStudent(studentInfo);
                         foundStudent = true;
                         break;
                     }
