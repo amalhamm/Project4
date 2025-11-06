@@ -20,6 +20,33 @@ public class Main {
         return new Student(0, firstName,lastName,major,gpa);
     }
 
+    public static Course getCourseInfo(){
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Enter department, num, title, course");
+        String text = keyboard.nextLine();
+        String[] split = text.split(",");
+        String dept = split[0].trim();
+        int num = Integer.parseInt(split[1].trim());
+        String title = split[2].trim();
+        String courseName = split[3].trim();
+        return new Course(0, dept, num, title, courseName);
+    }
+
+    public static Section getSectionInfo(){
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Enter courseID, facultyID, semester, day, startT, endT, modality");
+        String text = keyboard.nextLine();
+        String[] split = text.split(",");
+        int courseID = Integer.parseInt(split[0].trim());
+        int facultyID = Integer.parseInt(split[1].trim());
+        String semester = split[2].trim();
+        String day = split[3].trim();
+        String startT = split[4].trim();
+        String endT = split[5].trim();
+        String modality = split[6].trim();
+        return new Section(0, courseID, facultyID, semester, day, startT, endT, modality);
+    }
+
     public static void main(String[] args) {
 
         Scanner keyboard = new Scanner(System.in);

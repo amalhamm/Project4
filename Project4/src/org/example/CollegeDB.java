@@ -115,7 +115,7 @@ public class CollegeDB {
 
 
 
-    public static <Course> ArrayList<Course> getCourses(){
+    public static ArrayList<Course> getCourses(){
         ArrayList<Course> courses = new ArrayList<Course>();
 
         try {
@@ -143,7 +143,7 @@ public class CollegeDB {
         return courses;
     }
 
-    public static <Course> ArrayList<Course> getCourse(int id){
+    public static ArrayList<Course> getCourse(int id){
         ArrayList<Course> courses = new ArrayList<Course>();
 
         try {
@@ -173,7 +173,7 @@ public class CollegeDB {
         return courses;
     }
 
-    public static <Course> void updateCourse(Course course){
+    public static void updateCourse(Course course){
         CollegeDB.course = course;
         try {
             Connection connection = getConnection();
@@ -197,7 +197,7 @@ public class CollegeDB {
 
     // ========== SECTION METHODS ==========
 
-    public static <Section> ArrayList<Section> getSections(){
+    public static ArrayList<Section> getSections(){
         ArrayList<Section> sections = new ArrayList<Section>();
 
         try {
@@ -228,7 +228,7 @@ public class CollegeDB {
         return sections;
     }
 
-    public static <Section> ArrayList<Section> getSection(int id){
+    public static ArrayList<Section> getSection(int id){
         ArrayList<Section> sections = new ArrayList<Section>();
 
         try {
@@ -261,7 +261,7 @@ public class CollegeDB {
         return sections;
     }
 
-    public static <Section> void updateSection(Section section){
+    public void updateSection(Section section){
         try {
             Connection connection = getConnection();
 

@@ -1,11 +1,13 @@
+package org.example;
+
 public class Course {
     private int ID;
     private String department;
     private int num;
-    private int title;
-    private int course;
+    private String title;
+    private String course;
 
-    public Course(int ID, String department, int num, int title, int course) {
+    public Course(int ID, String department, int num, String title, String course) {
         this.ID = ID;
         this.department = department;
         this.num = num;
@@ -13,11 +15,11 @@ public class Course {
         this.course = course;
     }
 
-    public int getCourse() {
+    public String getCourse() {
         return course;
     }
 
-    public int getTitle() {
+    public String getTitle() {
         return title;
     }
 
@@ -45,11 +47,11 @@ public class Course {
         this.num = num;
     }
 
-    public void setTitle(int title) {
+    public void setTitle(String title) {
         this.title = title;
     }
 
-    public void setCourse(int course) {
+    public void setCourse(String course) {
         this.course = course;
     }
 

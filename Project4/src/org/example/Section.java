@@ -1,3 +1,5 @@
+package org.example;
+
 public class Section {
     private int ID;
     private int courseID;
